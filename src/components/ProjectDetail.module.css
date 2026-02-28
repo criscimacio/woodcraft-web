@@ -1,0 +1,383 @@
+.page {
+  min-height: 100vh;
+  background: #faf7f4;
+}
+
+/* Top bar */
+.topBar {
+  background: linear-gradient(135deg, #2c1810 0%, #5a3420 100%);
+  padding: 14px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+}
+
+.topBarInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.backBtn {
+  background: none;
+  border: none;
+  color: #d4a96a;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.backBtn:hover { color: #fff; }
+
+/* Content */
+.content {
+  padding: 32px 20px 80px;
+}
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Project header */
+.projectHeader {
+  margin-bottom: 28px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #f0ebe3;
+}
+
+.projectTitle {
+  font-size: 34px;
+  font-weight: 900;
+  color: #2c1810;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.diffBadge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.metaItem {
+  font-size: 14px;
+  color: #888;
+}
+
+.projectDesc {
+  font-size: 16px;
+  color: #7a6050;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+/* Tabs */
+.tabBar {
+  display: flex;
+  background: #f5f0ea;
+  border-radius: 12px;
+  padding: 4px;
+  gap: 4px;
+  margin-bottom: 28px;
+  max-width: 420px;
+}
+
+.tab {
+  flex: 1;
+  padding: 10px;
+  border-radius: 9px;
+  border: none;
+  background: transparent;
+  font-weight: 700;
+  font-size: 13px;
+  color: #8b6914;
+  transition: all 0.2s;
+}
+
+.tab:hover { background: rgba(200,129,58,0.15); }
+.tabActive { background: #c8813a !important; color: #fff !important; }
+
+/* Steps tab */
+.stepsTab {}
+
+.stepLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .stepLayout { grid-template-columns: 1fr; }
+}
+
+.stepImageWrap {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.stepImage {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.stepBadge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(0,0,0,0.65);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 13px;
+  border-radius: 20px;
+  backdrop-filter: blur(4px);
+}
+
+.stepInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Progress */
+.progressWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.progressTrack {
+  flex: 1;
+  height: 8px;
+  background: #e8e0d8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, #c8813a, #e8a55a);
+  border-radius: 20px;
+  transition: width 0.4s ease;
+}
+
+.progressPct {
+  font-size: 13px;
+  font-weight: 800;
+  color: #c8813a;
+  min-width: 36px;
+  text-align: right;
+}
+
+/* Step dots */
+.dots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.dot {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #e8e0d8;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 700;
+  transition: all 0.2s;
+}
+
+.dot:hover { background: #d4c9bc; }
+.dotActive { background: #c8813a !important; color: #fff !important; }
+.dotDone { background: #5a3420 !important; color: #fff !important; }
+
+/* Step content */
+.stepTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2c1810;
+  margin-bottom: 12px;
+}
+
+.stepDesc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: #5a4535;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Nav buttons */
+.navRow {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.navBtn {
+  flex: 1;
+  padding: 13px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  transition: all 0.2s;
+}
+
+.navBtn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+.navBtnOutline {
+  background: #fff;
+  border: 2px solid #e8e0d8 !important;
+  color: #2c1810;
+}
+.navBtnOutline:hover:not(:disabled) { border-color: #c8813a !important; }
+
+.navBtnPrimary {
+  background: #c8813a;
+  color: #fff;
+}
+.navBtnPrimary:hover:not(:disabled) { background: #b5712e; }
+
+.completeBanner {
+  background: #d1fae5;
+  color: #065f46;
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* All steps list */
+.allSteps {
+  border-top: 1px solid #f0ebe3;
+  padding-top: 28px;
+}
+
+.allStepsTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: #2c1810;
+  margin-bottom: 14px;
+}
+
+.stepRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 13px 14px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s;
+  margin-bottom: 4px;
+}
+
+.stepRow:hover { background: #f5f0ea; }
+.stepRowActive { background: #fef3e2 !important; }
+
+.stepNum {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #e8e0d8;
+  color: #aaa;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stepNumActive { background: #c8813a; color: #fff; }
+.stepNumDone { background: #5a3420; color: #fff; }
+
+.stepRowText { flex: 1; }
+
+.stepRowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c1810;
+}
+
+.currentTag {
+  font-size: 11px;
+  font-weight: 700;
+  background: #c8813a;
+  color: #fff;
+  padding: 2px 9px;
+  border-radius: 20px;
+}
+
+/* Materials / Tools tabs */
+.listTab {
+  max-width: 700px;
+}
+
+.listTabTitle {
+  font-size: 24px;
+  font-weight: 800;
+  color: #2c1810;
+  margin-bottom: 6px;
+}
+
+.listTabSub {
+  font-size: 14px;
+  color: #aaa;
+  margin-bottom: 24px;
+}
+
+.listGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 600px) {
+  .listGrid { grid-template-columns: 1fr; }
+  .projectTitle { font-size: 24px; }
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #f0ebe3;
+  border-radius: 10px;
+  padding: 14px 16px;
+  font-size: 14px;
+  color: #5a4535;
+  font-weight: 500;
+}
+
+.listBullet {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c8813a;
+  flex-shrink: 0;
+}
+
+.toolEmoji { font-size: 16px; flex-shrink: 0; }
